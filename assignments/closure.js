@@ -4,8 +4,28 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function family (familyName){
+  const me ='Leighton';
+  const wife ='Raka';
+  const sonA ='Jay';
+  const sonB ='Rohan';
+console.log(`We are the ${familyName}. I am ${me}, my wife is ${wife} and our sons are named ${sonA} and ${sonB}.`);
 
+  function house(houseName){
+    const rooms = "three bedrooms and two bathrooms";
+    console.log(`The ${familyName} lives at ${houseName}. Their home has ${rooms}`);
 
+    function mrPoodle(dogName){
+      console.log(`${dogName} is the pet for the ${familyName} that lives at ${houseName}.`);
+    
+    }//this closes mrPoodle
+    mrPoodle('Mister Poodle');
+  } //this closes house
+  house('9402 Claymount Lane in Fishers, Indiana');
+}// this closes family
+family('Fritze family');
+
+//------------------------------------------------------------------------------------------------------------------------------------
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
