@@ -91,7 +91,7 @@ console.log(firstNamesAllCaps);
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 // conver to uppercase
-let runnersLargeSizeShirt = runners.filter(runners => runners.shirt_size === "L");
+let runnersLargeSizeShirt = runners.filter(runners => runners.company_name === "L");
 console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
@@ -105,7 +105,27 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//filter
+
+let companyName = runners.filter(runners => runners.company_name === "Skinte");
+console.log(companyName);
+
 
 // Problem 2
+//map
+
+// let firstNamesAllCaps = runners.map((runners) => {
+//   return runners.first_name.toUpperCase();
+// });
+
+// console.log(firstNamesAllCaps);
+
+
 
 // Problem 3
+//reduce
+
+// let ticketPriceTotal = runners.reduce((totalTally, cb) => {
+//   return totalTally + cb.donation;
+// }, 0);
+// console.log(ticketPriceTotal);

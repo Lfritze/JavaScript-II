@@ -31,14 +31,39 @@ family('Fritze family');
 
 
 // ==== Challenge 2: Implement a "counter maker" function ====
-const counterMaker = () => {
+
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   // 2- Declare a function `counter`. It should increment and return `count`.
   //      NOTE: This `counter` function, being nested inside `counterMaker`,
   //      "closes over" the `count` variable. It can "see" it in the parent scope!
   // 3- Return the `counter` function.
-};
+
+  const counter = () => {
+  
+    // return function() {
+    //   count = count + 1;
+    //   return count;
+    // } // 
+    let count = 0;
+    return function() {
+    return ++count;
+    }
+  };
+  
+  const newCounter = counter ();
+  // console.log(counter());
+  // const newCounter = counter ();
+  console.log(newCounter());
+  console.log(newCounter());
+  console.log(newCounter());
+  console.log(newCounter());
+  console.log(newCounter());
+  console.log(newCounter());
+
+
+//-----------------------------------------------------------------------------------------
+
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
 // myCounter(); // 2
